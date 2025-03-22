@@ -238,91 +238,46 @@ body {
     transform: translateY(-3px);
 }
 
-.carousel {
-    position: relative;
-    overflow: hidden;
-    border-radius: 15px;
-    margin: 20px 0;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    aspect-ratio: 16/9;
-}
-
-.carousel-item {
-    display: none;
+.media-container {
     width: 100%;
-    height: 100%;
-    border-radius: 15px;
-    transition: opacity 0.5s ease-in-out;
-    object-fit: cover;
+    max-width: 600px;
+    margin: 20px auto;
+    position: relative;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.carousel-item.active {
+.media-item {
+    width: 100%;
+    height: auto;
     display: block;
-    animation: fadeIn 0.5s ease-in-out;
+    max-height: 400px;
+    object-fit: contain;
 }
 
-.carousel-controls {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.carousel-controls button {
-    background: var(--primary-color);
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 25px;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: 500;
-    transition: var(--transition);
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.carousel-controls button:hover {
-    background: var(--secondary-color);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.carousel-controls button:disabled {
-    background: #ccc;
-    cursor: not-allowed;
-}
-
-.carousel-indicator {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 15px;
-}
-
-.indicator-dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: #ddd;
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-.indicator-dot.active {
-    background: var(--secondary-color);
-    transform: scale(1.2);
-}
-
-.footer {
+.media-error {
+    padding: 20px;
     text-align: center;
-    padding: 2rem;
-    margin-top: 50px;
-    font-size: 1rem;
-    color: #666;
-    font-weight: 500;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.media-error a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.media-error a:hover {
+    text-decoration: underline;
+}
+
+/* Remove old carousel styles */
+.carousel,
+.carousel-indicator,
+.carousel-controls {
+    display: none;
 }
 
 @keyframes fadeInUp {
