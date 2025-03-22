@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --text-color: #2c3e50;
+    --light-gray: #f5f7fa;
+    --timeline-color: #3498db;
+    --card-bg: #ffffff;
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+    margin: 0;
+    padding: 20px;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.header {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: var(--card-bg);
+    border-radius: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--primary-color);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header p {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    margin: 1rem 0 0;
+    font-weight: 500;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 40px 0;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background: var(--timeline-color);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.timeline-item {
+    padding: 30px;
+    position: relative;
+    background: var(--card-bg);
+    border-radius: 20px;
+    width: 45%;
+    margin-bottom: 50px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transform: translateY(0);
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+    transform: translateX(-100px);
+    animation: slideInLeft 0.6s ease forwards;
+}
+
+.timeline-item:nth-child(even) {
+    left: 55%;
+    transform: translateX(100px);
+    animation: slideInRight 0.6s ease forwards;
+}
+
+.timeline-item:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.timeline-item h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin: 0 0 1rem;
+    font-weight: 600;
+}
+
+.timeline-item p {
+    font-size: 1.1rem;
+    color: #666;
+    margin: 1rem 0;
+    line-height: 1.6;
+}
+
+.date-badge {
+    position: absolute;
+    top: -15px;
+    background: var(--accent-color);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.timeline-item:nth-child(odd) .date-badge {
+    right: 20px;
+}
+
+.timeline-item:nth-child(even) .date-badge {
+    left: 20px;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: var(--secondary-color);
+    border: 4px solid white;
+    top: 35px;
+    border-radius: 50%;
+    z-index: 1;
+    transition: var(--transition);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-item:nth-child(odd)::after {
+    right: -20px;
+}
+
+.timeline-item:nth-child(even)::after {
+    left: -20px;
+}
+
+.timeline-item:hover::after {
+    background: var(--accent-color);
+    transform: scale(1.2);
+}
+
+.timeline-item img,
+.timeline-item video {
+    width: 100%;
+    border-radius: 10px;
+    margin: 15px 0;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.timeline-item img:hover,
+.timeline-item video:hover {
+    transform: scale(1.03);
+}
+
+.milestone-icon {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    display: inline-block;
+    transition: var(--transition);
+}
+
+.timeline-item:hover .milestone-icon {
+    transform: scale(1.2) rotate(5deg);
+    color: var(--accent-color);
+}
+
+.timeline-description {
+    font-style: italic;
+    color: #666;
+    margin: 1rem 0;
+    padding: 0.5rem;
+    border-left: 3px solid var(--secondary-color);
+    background: rgba(52, 152, 219, 0.05);
+    border-radius: 0 5px 5px 0;
+}
+
+.timeline-description i {
+    color: var(--secondary-color);
+    margin: 0 0.5rem;
+}
+
+.signature {
+    display: block;
+    margin-top: 1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    text-align: right;
+}
+
+.social-links {
+    margin-top: 1rem;
+}
+
+.social-link {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin: 0 1rem;
+    transition: var(--transition);
+}
+
+.social-link:hover {
+    color: var(--secondary-color);
+    transform: translateY(-3px);
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    margin: 20px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    aspect-ratio: 16/9;
+}
+
+.carousel-item {
+    display: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    transition: opacity 0.5s ease-in-out;
+    object-fit: cover;
+}
+
+.carousel-item.active {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.carousel-controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.carousel-controls button {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-controls button:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-controls button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.carousel-indicator {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.indicator-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ddd;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.indicator-dot.active {
+    background: var(--secondary-color);
+    transform: scale(1.2);
+}
+
+.footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 50px;
+    font-size: 1rem;
+    color: #666;
+    font-weight: 500;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    .timeline::after {
+        left: 31px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        margin-bottom: 30px;
+        left: 0 !important;
+        transform: none !important;
+    }
+
+    .timeline-item::after {
+        left: 15px !important;
+    }
+
+    .date-badge {
+        left: 70px !important;
+        right: auto !important;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .header p {
+        font-size: 1rem;
+    }
+}
+
+.header-decoration {
+    margin-top: 1rem;
+    color: var(--accent-color);
+    font-size: 1.5rem;
+}
+
+.header-decoration i {
+    margin: 0 0.5rem;
+    animation: pulse 2s infinite;
+}
+
+.header-decoration i:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.header-decoration i:nth-child(3) {
+    animation-delay: 1s;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}

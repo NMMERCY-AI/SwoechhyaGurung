@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swoechhya's Journey Timeline</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="header">
+        <h1>🌟 Swoechhya's Journey 🌟</h1>
+        <p>A Story of Perseverance and Success</p>
+        <div class="header-decoration">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-star"></i>
+        </div>
+    </div>
+
+    <div class="timeline">
+        <!-- First Timeline Item: Sukute Beach -->
+        <div class="timeline-item left">
+            <div class="date-badge">
+                <i class="fas fa-calendar-alt"></i> 2024
+            </div>
+            <div class="timeline-content">
+                <div class="milestone-icon">
+                    <i class="fas fa-umbrella-beach"></i>
+                </div>
+                <h3>Sukute Beach Adventure</h3>
+                <div class="carousel" id="carousel1">
+                    <img src="img-sukuta/WhatsApp Image 2025-03-07 at 6.01.40 PM (1).jpeg" alt="Sukute Beach Photo 1" class="carousel-item active">
+                    <video controls class="carousel-item">
+                        <source src="img-sukuta/WhatsApp Video 2025-03-07 at 6.01.26 PM.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="carousel-indicator" id="indicator1"></div>
+                <div class="carousel-controls">
+                    <button onclick="showPrevItem('carousel1', 'indicator1')">
+                        <i class="fas fa-chevron-left"></i> Previous
+                    </button>
+                    <button onclick="showNextItem('carousel1', 'indicator1')">
+                        Next <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <p class="timeline-description">
+                    <i class="fas fa-quote-left"></i>
+                    Exploring the journey began with gathering all of us at the beautiful Sukute Beach.
+                    <i class="fas fa-quote-right"></i>
+                </p>
+            </div>
+        </div>
+
+        <!-- Second Timeline Item: Deusi Vailo -->
+        <div class="timeline-item right">
+            <div class="date-badge">
+                <i class="fas fa-calendar-alt"></i> 2025
+            </div>
+            <div class="timeline-content">
+                <div class="milestone-icon">
+                    <i class="fas fa-music"></i>
+                </div>
+                <h3>Deusi Vailo Celebration</h3>
+                <div class="carousel" id="carousel2">
+                    <video controls class="carousel-item active">
+                        <source src="img-deusi-vailo/WhatsApp Video 2025-03-07 at 6.01.30 PM.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <video controls class="carousel-item">
+                        <source src="img-deusi-vailo/WhatsApp Video 2025-03-07 at 6.01.31 PM.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <video controls class="carousel-item">
+                        <source src="img-deusi-vailo/WhatsApp Video 2025-03-07 at 6.01.32 PM.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <video controls class="carousel-item">
+                        <source src="img-deusi-vailo/WhatsApp Video 2025-03-07 at 6.01.33 PM (1).mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <video controls class="carousel-item">
+                        <source src="img-deusi-vailo/WhatsApp Video 2025-03-07 at 6.01.34 PM.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <video controls class="carousel-item">
+                        <source src="img-deusi-vailo/WhatsApp Video 2025-03-07 at 6.01.36 PM (1).mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="carousel-indicator" id="indicator2"></div>
+                <div class="carousel-controls">
+                    <button onclick="showPrevItem('carousel2', 'indicator2')">
+                        <i class="fas fa-chevron-left"></i> Previous
+                    </button>
+                    <button onclick="showNextItem('carousel2', 'indicator2')">
+                        Next <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <p class="timeline-description">
+                    <i class="fas fa-quote-left"></i>
+                    Celebrating the traditional Deusi Vailo with joy and enthusiasm.
+                    <i class="fas fa-quote-right"></i>
+                </p>
+            </div>
+        </div>
+
+        <!-- Third Timeline Item: Pokhara -->
+        <div class="timeline-item left">
+            <div class="date-badge">
+                <i class="fas fa-calendar-alt"></i> 2025
+            </div>
+            <div class="timeline-content">
+                <div class="milestone-icon">
+                    <i class="fas fa-mountain"></i>
+                </div>
+                <h3>Pokhara Adventure</h3>
+                <div class="carousel" id="carousel3">
+                    <video controls class="carousel-item active">
+                        <source src="img-phk/WhatsApp Video 2025-03-07 at 6.01.26 PM.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="carousel-indicator" id="indicator3"></div>
+                <div class="carousel-controls">
+                    <button onclick="showPrevItem('carousel3', 'indicator3')">
+                        <i class="fas fa-chevron-left"></i> Previous
+                    </button>
+                    <button onclick="showNextItem('carousel3', 'indicator3')">
+                        Next <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <p class="timeline-description">
+                    <i class="fas fa-quote-left"></i>
+                    Exploring the beautiful city of Pokhara with its stunning landscapes.
+                    <i class="fas fa-quote-right"></i>
+                </p>
+            </div>
+        </div>
+
+        <!-- Fourth Timeline Item: Losar -->
+        <div class="timeline-item right">
+            <div class="date-badge">
+                <i class="fas fa-calendar-alt"></i> 2025
+            </div>
+            <div class="timeline-content">
+                <div class="milestone-icon">
+                    <i class="fas fa-dragon"></i>
+                </div>
+                <h3>Losar Celebrations 2080, 2081</h3>
+                <div class="carousel" id="carousel4">
+                    <img src="img-losar/WhatsApp Image 2025-03-07 at 6.01.40 PM.jpeg" alt="Losar Celebration Photo 1" class="carousel-item active">
+                    <img src="img-losar/WhatsApp Image 2025-03-07 at 6.01.42 PM.jpeg" alt="Losar Celebration Photo 2" class="carousel-item">
+                    <video controls class="carousel-item">
+                        <source src="img-losar/WhatsApp Video 2025-03-07 at 6.01.42 PM.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="carousel-indicator" id="indicator4"></div>
+                <div class="carousel-controls">
+                    <button onclick="showPrevItem('carousel4', 'indicator4')">
+                        <i class="fas fa-chevron-left"></i> Previous
+                    </button>
+                    <button onclick="showNextItem('carousel4', 'indicator4')">
+                        Next <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <p class="timeline-description">
+                    <i class="fas fa-quote-left"></i>
+                    Celebrating the New Year with traditional Losar festivities.
+                    <i class="fas fa-quote-right"></i>
+                </p>
+            </div>
+        </div>
+
+        <!-- Fifth Timeline Item: Visa Celebration -->
+        <div class="timeline-item left">
+            <div class="date-badge">
+                <i class="fas fa-calendar-alt"></i> 2025
+            </div>
+            <div class="timeline-content">
+                <div class="milestone-icon">
+                    <i class="fas fa-passport"></i>
+                </div>
+                <h3>Visa Success Celebration</h3>
+                <div class="carousel" id="carousel5">
+                    <video controls class="carousel-item active">
+                        <source src="img-visa/WhatsApp Video 2025-03-07 at 6.01.36 PM.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="carousel-indicator" id="indicator5"></div>
+                <div class="carousel-controls">
+                    <button onclick="showPrevItem('carousel5', 'indicator5')">
+                        <i class="fas fa-chevron-left"></i> Previous
+                    </button>
+                    <button onclick="showNextItem('carousel5', 'indicator5')">
+                        Next <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <p class="timeline-description">
+                    <i class="fas fa-quote-left"></i>
+                    Exciting milestone achieved! Celebrating with friends and family.
+                    <br>
+                    <span class="signature">- Swoechyya Gurung</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2025 - A Journey to Remember</p>
+        <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
